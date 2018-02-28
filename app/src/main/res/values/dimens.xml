@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="edittext_textsize_login">22sp</dimen>
+    <dimen name="padding_horizontal_log">32dp</dimen>
+    <dimen name="textsixe_donthaveaccount">16sp</dimen>
+    <dimen name="margin_createhere">10sp</dimen>
+    <dimen name="margin_top_editext">8dp</dimen>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CodeGram</string>
+    <string name="hint_user_name">Nombre de usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="login_btn">Login</string>
+    <string name="dont_have_account">¿No tienes cuenta?,</string>
+    <string name="create_here">crea una aquí</string>
+    <string name="hint_reg_email">Correo</string>
+    <string name="hint_reg_user">Usuario</string>
+    <string name="hint_reg_conf_password">Confirmar Contraseña</string>
+    <string name="reg_btn">Únete</string>
+    <string name="hint_reg_name">Nombre</string>
+    <string name="reg_toolbar">Crear Cuenta</string>
+</resources>
