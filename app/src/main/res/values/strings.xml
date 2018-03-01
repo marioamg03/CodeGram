@@ -11,4 +11,8 @@
     <string name="reg_btn">Únete</string>
     <string name="hint_reg_name">Nombre</string>
     <string name="reg_toolbar">Crear Cuenta</string>
+    <string name="hint_user_name_card">Mario Mendoza</string>
+    <string name="first_word_card">Hace</string>
+    <string name="time_card_card">4 días</string>
+    <string name="like_number_card">10 Me gusta</string>
 </resources>

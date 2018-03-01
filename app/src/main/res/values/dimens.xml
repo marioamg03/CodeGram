@@ -6,4 +6,10 @@
     <dimen name="textsixe_donthaveaccount">16sp</dimen>
     <dimen name="margin_createhere">10sp</dimen>
     <dimen name="margin_top_editext">8dp</dimen>
+    <dimen name="height_cardview">200dp</dimen>
+    <dimen name="coner_radius_cardview">4dp</dimen>
+    <dimen name="textsixe_user_name_card">25sp</dimen>
+    <dimen name="textsixe_first_word_card">15sp</dimen>
+    <dimen name="marginleft_time_card">5dp</dimen>
+    <dimen name="like_margin_top_card">10dp</dimen>
 </resources>
