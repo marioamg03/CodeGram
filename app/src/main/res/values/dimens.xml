@@ -12,4 +12,5 @@
     <dimen name="textsixe_first_word_card">15sp</dimen>
     <dimen name="marginleft_time_card">5dp</dimen>
     <dimen name="like_margin_top_card">10dp</dimen>
+    <dimen name="bottombar_height">70dp</dimen>
 </resources>

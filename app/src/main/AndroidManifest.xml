@@ -16,12 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.RegisterActivity"
+        <activity
+            android:name=".view.RegisterActivity"
             android:parentActivityName=".LoginActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginActivity">
-            </meta-data>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity"></meta-data>
         </activity>
+        <activity android:name=".view.ContainerActivity"></activity>
     </application>
 
 </manifest>

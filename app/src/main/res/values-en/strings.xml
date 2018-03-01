@@ -11,7 +11,10 @@
     <string name="reg_btn">Join us</string>
     <string name="hint_reg_name">Name</string>
     <string name="reg_toolbar">Create Account</string>
-    <string name="first_word_card">Hace</string>
+    <string name="first_word_card">Ago</string>
     <string name="time_card_card">4 days</string>
-    <string name="like_number_card">10 Me gusta</string>
+    <string name="like_number_card">10 Likes</string>
+    <string name="tab_search">Search</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_profile">Me</string>
 </resources>
