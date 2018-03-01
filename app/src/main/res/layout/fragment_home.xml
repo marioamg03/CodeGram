@@ -16,12 +16,10 @@
         android:paddingLeft="@dimen/padding_horizontal_log"
         android:paddingRight="@dimen/padding_horizontal_log"
         android:paddingTop="@dimen/padding_horizontal_log">
-
-        <include layout="@layout/cardview_picture"/>
-
-        <include layout="@layout/cardview_picture"/>
-
-        <include layout="@layout/cardview_picture"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pictureRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
