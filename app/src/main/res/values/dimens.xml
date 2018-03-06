@@ -31,5 +31,6 @@
     <dimen name="margin_top_username_toolbarprofile">-5dp</dimen>
     <dimen name="padding_recicler_search">4dp</dimen>
     <dimen name="spacing">10dp</dimen>
+    <dimen name="bottombar_height_tablet">60dp</dimen>
 
 </resources>
