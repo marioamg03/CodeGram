@@ -19,4 +19,6 @@
     <dimen name="textsize_like_number">15sp</dimen>
     <dimen name="height_divider">1dp</dimen>
     <dimen name="padding_horizontal_detail_text">35dp</dimen>
+    <dimen name="image_circle_image_profile">160dp</dimen>
+    <dimen name="image_circle_elevation">10dp</dimen>
 </resources>
