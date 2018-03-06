@@ -21,4 +21,12 @@
     <dimen name="padding_horizontal_detail_text">35dp</dimen>
     <dimen name="image_circle_image_profile">160dp</dimen>
     <dimen name="image_circle_elevation">10dp</dimen>
+    <dimen name="limit_circle_image">-206dp</dimen>
+    <dimen name="margin_top_circle_imageprofile">5dp</dimen>
+    <dimen name="width_circle_image_toolbar">40dp</dimen>
+    <dimen name="textsixe_user_name_toolbar_profile">18sp</dimen>
+    <dimen name="margin_left_username_toolbar_profile">72dp</dimen>
+    <dimen name="margin_top_username_toolbar_profile">80dp</dimen>
+    <dimen name="limit_user_name_toolbarprofile">-250dp</dimen>
+    <dimen name="margin_top_username_toolbarprofile">-5dp</dimen>
 </resources>
