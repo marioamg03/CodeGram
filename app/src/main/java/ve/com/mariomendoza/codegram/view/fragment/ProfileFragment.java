@@ -17,9 +17,6 @@ import ve.com.mariomendoza.codegram.R;
 import ve.com.mariomendoza.codegram.adapter.PictureAdapterRecyclerView;
 import ve.com.mariomendoza.codegram.model.Picture;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ProfileFragment extends Fragment {
 
 
