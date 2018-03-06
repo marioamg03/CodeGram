@@ -14,4 +14,9 @@
     <dimen name="like_margin_top_card">10dp</dimen>
     <dimen name="bottombar_height">70dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_layout_height">250dp</dimen>
+    <dimen name="padding_horizontal_margin">10dp</dimen>
+    <dimen name="textsize_like_number">15sp</dimen>
+    <dimen name="height_divider">1dp</dimen>
+    <dimen name="padding_horizontal_detail_text">35dp</dimen>
 </resources>
