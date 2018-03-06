@@ -1,9 +1,12 @@
 package ve.com.mariomendoza.codegram.view;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.transition.Fade;
 
 import ve.com.mariomendoza.codegram.R;
 
@@ -14,6 +17,11 @@ public class PictureDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picture_detail);
         showToolbar("",true);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+            getWindow().setEnterTransition(new Fade());
+        }
     }
 
     public void showToolbar(String title, boolean upButton){
