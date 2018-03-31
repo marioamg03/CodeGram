@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="ve.com.mariomendoza.codegram.LoginActivity"
+    tools:context="ve.com.mariomendoza.codegram.login.view.LoginActivity"
     android:background="@color/colorPrimary">
 
     
@@ -75,7 +75,9 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/botton_create_a_count"
+                    android:layout_marginTop="@dimen/like_margin_top_card"
                     android:gravity="center">
 
                     <TextView
@@ -84,8 +86,8 @@
                         android:layout_height="wrap_content"
                         android:text="@string/dont_have_account"
                         android:textColor="@android:color/white"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/textsixe_donthaveaccount"/>
+                        android:textSize="@dimen/textsixe_donthaveaccount"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/createHere"
@@ -100,6 +102,11 @@
                         android:textStyle="bold" />
 
                 </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressbarLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
         </ScrollView>
