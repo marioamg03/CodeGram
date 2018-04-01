@@ -12,6 +12,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import ve.com.mariomendoza.codegram.R;
+import ve.com.mariomendoza.codegram.login.presenter.LoginPresenter;
+import ve.com.mariomendoza.codegram.login.presenter.LoginPresenterImpl;
 import ve.com.mariomendoza.codegram.view.ContainerActivity;
 import ve.com.mariomendoza.codegram.view.RegisterActivity;
 
@@ -25,10 +27,16 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
     private Button login_button;
     private ImageView logo;
 
+    private LoginPresenter loginPresenter;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        loginPresenter = new LoginPresenterImpl(this);
 
         user_name = (TextInputEditText) findViewById(R.id.username);
         password = (TextInputEditText) findViewById(R.id.password);
@@ -47,7 +55,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goHome();
+                loginPresenter.SingIn(user_name.getText().toString(),password.getText().toString());
             }
         });
 
