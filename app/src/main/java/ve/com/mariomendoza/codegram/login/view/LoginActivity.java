@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import ve.com.mariomendoza.codegram.R;
 import ve.com.mariomendoza.codegram.login.presenter.LoginPresenter;
@@ -42,6 +43,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         password = (TextInputEditText) findViewById(R.id.password);
 
         progressLogin = (ProgressBar) findViewById(R.id.progressbarLogin);
+        hideProgressBar();
 
         reg_editext = (TextView) findViewById(R.id.createHere);
         reg_editext.setOnClickListener(new View.OnClickListener() {
@@ -98,8 +100,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
     }
 
     @Override
-    public void loginError() {
-
+    public void loginError(String error) {
+        Toast.makeText(this, error, Toast.LENGTH_SHORT).show();
     }
 
     @Override

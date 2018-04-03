@@ -8,7 +8,7 @@ public interface LoginView {
     void showProgressBar();
     void hideProgressBar();
 
-    void loginError();
+    void loginError(String error);
 
     void goCreateAccount();
     void goHome();

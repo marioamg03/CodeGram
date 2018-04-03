@@ -4,10 +4,6 @@ import ve.com.mariomendoza.codegram.login.interactor.LoginInteractor;
 import ve.com.mariomendoza.codegram.login.interactor.LoginInteractorImpl;
 import ve.com.mariomendoza.codegram.login.view.LoginView;
 
-/**
- * Created by PC 4 on 31/3/2018.
- */
-
 public class LoginPresenterImpl implements LoginPresenter{
 
     private LoginView loginView;
@@ -20,16 +16,21 @@ public class LoginPresenterImpl implements LoginPresenter{
 
     @Override
     public void SingIn(String username, String password) {
+        loginView.disableInputs();
+        loginView.showProgressBar();
         loginInteractor.SingIn(username,password);
     }
 
     @Override
     public void loginSuccess() {
-
+        loginView.hideProgressBar();
+        loginView.goHome();
     }
 
     @Override
-    public void loginError() {
-
+    public void loginError(String error) {
+        loginView.enableInputs();
+        loginView.hideProgressBar();
+        loginView.loginError(error);
     }
 }
