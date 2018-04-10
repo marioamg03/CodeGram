@@ -15,13 +15,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        
+        <provider
+            android:authorities="ve.com.mariomendoza.codegram"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"/>
+
+        </provider>
+        
+        
         <activity android:name=".login.view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".view.RegisterActivity"
             android:parentActivityName=".login.view.LoginActivity">
@@ -29,7 +41,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".login.view.LoginActivity" />
         </activity>
+
         <activity android:name=".view.ContainerActivity" />
+
         <activity
             android:name=".view.PictureDetailActivity"
             android:parentActivityName=".view.ContainerActivity">
@@ -37,7 +51,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.ContainerActivity" />
         </activity>
+
         <activity android:name=".post.view.NewPostActivity"></activity>
+
     </application>
 
 </manifest>
