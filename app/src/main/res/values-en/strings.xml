@@ -18,4 +18,7 @@
     <string name="tab_home">Home</string>
     <string name="tab_profile">Me</string>
     <string name="search_hint">Search...</string>
+    <string name="hint_edtTitle">Titulo</string>
+    <string name="hint_edtDescription">Descripcion</string>
+    <string name="sumit_btn_image">Crear Post</string>
 </resources>

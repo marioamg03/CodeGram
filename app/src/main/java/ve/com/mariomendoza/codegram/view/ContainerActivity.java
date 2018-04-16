@@ -8,7 +8,7 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
 import ve.com.mariomendoza.codegram.R;
-import ve.com.mariomendoza.codegram.view.fragment.HomeFragment;
+import ve.com.mariomendoza.codegram.post.view.HomeFragment;
 import ve.com.mariomendoza.codegram.view.fragment.ProfileFragment;
 import ve.com.mariomendoza.codegram.view.fragment.SearchFragment;
 

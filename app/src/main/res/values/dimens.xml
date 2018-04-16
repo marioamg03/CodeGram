@@ -32,5 +32,6 @@
     <dimen name="padding_recicler_search">4dp</dimen>
     <dimen name="spacing">10dp</dimen>
     <dimen name="bottombar_height_tablet">60dp</dimen>
+    <dimen name="botton_create_a_count">20dp</dimen>
 
 </resources>
