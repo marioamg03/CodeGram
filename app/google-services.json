@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "430926811828",
+    "firebase_url": "https://codegram-bf29d.firebaseio.com",
+    "project_id": "codegram-bf29d",
+    "storage_bucket": "codegram-bf29d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430926811828:android:ee580e8952f39d46",
+        "android_client_info": {
+          "package_name": "ve.com.mariomendoza.codegram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430926811828-iks3se5d2b77kqhl5rkp00r5ubb1it9u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ve.com.mariomendoza.codegram",
+            "certificate_hash": "cbd55c4468b863d1f70c8f960ba689a8ff2e8258"
+          }
+        },
+        {
+          "client_id": "430926811828-8juefvb79p7gd3m2nfmgpedrqs2s3pee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBygOPTmcdTPdkPaqqdE0sUakpxYzK6-kg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430926811828-8juefvb79p7gd3m2nfmgpedrqs2s3pee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
