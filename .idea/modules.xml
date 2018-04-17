@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CodeGram.iml" filepath="$PROJECT_DIR$/CodeGram.iml" />
-      <module fileurl="file://C:\Users\Mario\AndroidStudioProjects\CodeGram\CodeGram.iml" filepath="C:\Users\Mario\AndroidStudioProjects\CodeGram\CodeGram.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Mario\AndroidStudioProjects\CodeGram\app\app.iml" filepath="C:\Users\Mario\AndroidStudioProjects\CodeGram\app\app.iml" />
     </modules>
   </component>
 </project>

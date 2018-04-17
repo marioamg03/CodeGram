@@ -41,20 +41,9 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         joinUsButton.setOnClickListener(new View.OnClickListener() {
-            String email    = (emailEdt).getText().toString();
-            String password = (passwordEdt).getText().toString();
             @Override
             public void onClick(View view) {
-                firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(getParent(), new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(RegisterActivity.this,"Cuenta creada",Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(RegisterActivity.this,"Ocurrio un error",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                createAccount();
             }
         });
 
@@ -64,12 +53,29 @@ public class RegisterActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
                 if (firebaseUser != null){
-                    Log.w(TAG,"Usuario Logueado"+firebaseUser.getEmail());
+                    Log.w(TAG,"Usuario Logueado "+firebaseUser.getEmail());
                 }else{
-                    Log.w(TAG,"Usuario NO Logueado");
+                    Log.w(TAG,"Usuario NO Logueado ");
                 }
             }
         };
+    }
+
+    private void createAccount() {
+        String email    = (emailEdt).getText().toString();
+        String password = (passwordEdt).getText().toString();
+
+        firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(RegisterActivity.this,"Cuenta creada",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(RegisterActivity.this,"Ocurrio un error",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
     public void showToolbar(String title, boolean upButton){
