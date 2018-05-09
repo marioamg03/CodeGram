@@ -1,5 +1,9 @@
 package ve.com.mariomendoza.codegram.login.interactor;
 
+import android.app.Activity;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 import ve.com.mariomendoza.codegram.login.presenter.LoginPresenter;
 import ve.com.mariomendoza.codegram.login.repository.LoginRepository;
 import ve.com.mariomendoza.codegram.login.repository.LoginRepositoryImpl;
@@ -19,7 +23,7 @@ public class LoginInteractorImpl implements LoginInteractor{
     }
 
     @Override
-    public void SingIn(String username, String password) {
-        loginRepository.SignIn(username,password);
+    public void SingIn(String username, String password, Activity activity,FirebaseAuth firebaseAuth) {
+        loginRepository.SignIn(username,password,activity,firebaseAuth);
     }
 }

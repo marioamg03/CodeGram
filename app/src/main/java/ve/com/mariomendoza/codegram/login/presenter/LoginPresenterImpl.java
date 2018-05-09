@@ -1,5 +1,9 @@
 package ve.com.mariomendoza.codegram.login.presenter;
 
+import android.app.Activity;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 import ve.com.mariomendoza.codegram.login.interactor.LoginInteractor;
 import ve.com.mariomendoza.codegram.login.interactor.LoginInteractorImpl;
 import ve.com.mariomendoza.codegram.login.view.LoginView;
@@ -15,10 +19,10 @@ public class LoginPresenterImpl implements LoginPresenter{
     }
 
     @Override
-    public void SingIn(String username, String password) {
+    public void SingIn(String username, String password, Activity activity,FirebaseAuth firebaseAuth) {
         loginView.disableInputs();
         loginView.showProgressBar();
-        loginInteractor.SingIn(username,password);
+        loginInteractor.SingIn(username,password,activity,firebaseAuth);
     }
 
     @Override

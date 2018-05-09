@@ -28,6 +28,7 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -41,6 +42,10 @@ import ve.com.mariomendoza.codegram.view.RegisterActivity;
 public class LoginActivity extends AppCompatActivity implements LoginView{
 
 
+    private static final String TAG = "LoginRepositoryImpl";
+    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener authStateListener;
+
     private TextInputEditText user_name, password;
     private ProgressBar progressLogin;
 
@@ -53,8 +58,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
 
     private CallbackManager callbackManager;
 
-    private FirebaseAuth firebaseAuth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +65,19 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
 
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        authStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                if (firebaseUser != null){
+                    Log.w(TAG,"Usuario Logueado "+firebaseUser.getEmail());
+                }else{
+                    Log.w(TAG,"Usuario NO Logueado ");
+                }
+            }
+        };
 
         loginPresenter = new LoginPresenterImpl(this);
 
@@ -83,7 +99,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loginPresenter.SingIn(user_name.getText().toString(),password.getText().toString());
+                signIn(user_name.getText().toString(),password.getText().toString());
             }
         });
 
@@ -92,18 +108,18 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         loginFacebook.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                Log.w("FACEBOOK","Logueo de Facebook Exitoso " + loginResult.getAccessToken().getApplicationId());
+                Log.w(TAG,"Logueo de Facebook Exitoso " + loginResult.getAccessToken().getApplicationId());
                 signInFacebookFirebase(loginResult.getAccessToken());
             }
 
             @Override
             public void onCancel() {
-                Log.w("FACEBOOK","Logueo de Facebook Cancelado");
+                Log.w(TAG,"Logueo de Facebook Cancelado");
             }
 
             @Override
             public void onError(FacebookException error) {
-                Log.w("FACEBOOK","OCURRIO UN ERROR CODIGO: " + error.toString());
+                Log.w(TAG,"OCURRIO UN ERROR CODIGO: " + error.toString());
                 error.printStackTrace();
             }
         });
@@ -122,6 +138,10 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         });
 
 
+    }
+
+    private void signIn(String user_name, String password) {
+        loginPresenter.SingIn(user_name,password,this,firebaseAuth);
     }
 
     private void signInFacebookFirebase(AccessToken accessToken) {
@@ -179,4 +199,17 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         Intent home_intent = new Intent(LoginActivity.this, ContainerActivity.class);
         startActivity(home_intent);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        firebaseAuth.addAuthStateListener(authStateListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        firebaseAuth.removeAuthStateListener(authStateListener);
+    }
+
 }

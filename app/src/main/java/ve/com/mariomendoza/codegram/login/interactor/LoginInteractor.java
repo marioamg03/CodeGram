@@ -1,9 +1,9 @@
 package ve.com.mariomendoza.codegram.login.interactor;
 
-/**
- * Created by PC 4 on 31/3/2018.
- */
+import android.app.Activity;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public interface LoginInteractor {
-    void SingIn(String username,String password);
+    void SingIn(String username, String password, Activity activity,FirebaseAuth firebaseAuth);
 }

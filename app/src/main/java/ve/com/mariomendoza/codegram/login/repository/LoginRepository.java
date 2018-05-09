@@ -1,9 +1,10 @@
 package ve.com.mariomendoza.codegram.login.repository;
 
-/**
- * Created by PC 4 on 31/3/2018.
- */
+import android.app.Activity;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public interface LoginRepository {
-    void SignIn(String username,String password);
+    void SignIn(String username, String password, Activity activity,FirebaseAuth firebaseAuth);
 }
