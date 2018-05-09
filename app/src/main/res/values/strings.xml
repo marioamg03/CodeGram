@@ -29,4 +29,10 @@
     <string name="hint_edtTitle">Titulo</string>
     <string name="hint_edtDescription">Descripción</string>
     <string name="sumit_btn_image">Crear Post</string>
+
+
+
+    <string name="facebook_app_id">1023261221162949</string>
+    <string name="fb_login_protocol_scheme">fb1023261221162949</string>
+
 </resources>
